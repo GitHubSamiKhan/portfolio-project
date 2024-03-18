@@ -7,7 +7,7 @@ const Header = () => {
     useEffect(() => {
         if (typedRef.current) {
             const options = {
-                strings: ['Web Design', 'Web Development', 'Programmer', 'Google Ads', 'Figma designer'],
+                strings: ['Web Design', 'Web Development', 'Programmer', 'Figma designer'],
                 typeSpeed: 40,
                 backSpeed: 60,
                 loop: true
