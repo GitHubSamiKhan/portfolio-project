@@ -48,6 +48,8 @@
   --primary-dark: rgb(52, 58, 64);
   --primary-red: #ef4035;
   --primary-hover-red: #f33501;
+  --primary-black: #000000;
+  --primary-transparent-black: rgba(0, 0, 0, 0.7);
 }
 
 body {
@@ -219,6 +221,7 @@ span {
   padding: 0.625rem;
   margin-bottom: 1.875rem;
   background-color: var(--primary-white);
+  transition: 0.3s ease-in-out;
 }
 
 .services .box:hover {
@@ -332,3 +335,151 @@ span {
     width: 100%;
   }
 }
+
+/* *************************** PORTFOLIO *********************************** */
+
+/* THIS CONTAINER POR IS FROM CHAT GPT */
+.container-por {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-content: center;
+  gap: 0.5rem;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.portfolio-wrapper {
+  background: var(--primary-light-grey);
+  padding: 3rem 0;
+}
+
+.portfolio-image {
+  width: 100%;
+  border: 1px solid var(--primary-orange);
+  padding: 0 0.5rem;
+  margin: 0;
+}
+
+.portfolio-image-box {
+  position: relative;
+  margin: 1rem;
+}
+
+/* ****************** OVERFLOW  BOX**************** */
+.overflow {
+  position: absolute;
+  opacity: 0;
+  background: var(--primary-black);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border: 1px solid var(--primary-red);
+  cursor: pointer;
+
+}
+
+.portfolio-image-box:hover .overflow {
+  opacity: 60%;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio-icon {
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--primary-orange);
+  font-size: 1.5rem;
+}
+
+.portfolio-image-box:hover .portfolio-icon {
+  opacity: 70%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* ****************** POPUP BOX**************** */
+/* .portfolio-image-popupbox {
+  width: 45rem;
+  padding: 0 0.5rem;
+}
+
+.hyper-link {
+  cursor: pointer;
+  color: var(--primary-orange);
+}
+
+.hyper-link:hover {
+  color: var(--primary-red);
+} */
+
+/* ****************************  TESTIMONIALS  ************************************** */
+.testimonials {
+  background-image: url(testimonials-bg.jpg);
+  background-size: cover;
+  background-color: var(--primary-black);
+  text-align: center;
+  padding-bottom: 4rem;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.testimonials h1 {
+  color: var(--primary-orange);
+  padding: 3rem 0;
+  text-transform: uppercase;
+}
+
+
+.testimonials-content {
+  text-align: center;
+  max-width: 43.125rem;
+  margin: 0 auto 10rem auto;
+  background: var(--primary-transparent-black);
+}
+
+
+.myCarousel {
+  color: var(--primary-white);
+  background: transparent;
+  margin-top: -6%;
+  width: 54%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6%;
+  padding-bottom: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 17.875rem;
+}
+
+.myCarousel h3 {
+  color: var(--primary-orange);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.Carousel .slide img {
+  width: 10rem !important;
+  border-radius: 50%;
+}
+
+.Carousel .slide {
+  background: transparent !important;
+  height: 100% !important;
+  padding-top: 2rem;
+}
+
+.myCarousel p {
+  color: var(--primary-grey);
+}
+
+.Carousel-root {
+  margin: auto !important;
+  margin-top: 3% !important;
+}
+
+
+
+/* ***************************************************************** */
